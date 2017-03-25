@@ -28,7 +28,7 @@ public class MathApplicationTester {
     @Mock
     CalculatorService calculatorService;
 
-    // the real test
+    // test addition operation
     @Test
     public void testAdd() {
         // add the behavior of calculator service to add two numbers
@@ -36,5 +36,15 @@ public class MathApplicationTester {
 
         // test the add functionality
         assertEquals( mathApplication.add(10.0, 20.0), 30.0 );
+    }
+
+    // test substraction operation
+    @Test
+    public void  testSubstract() {
+        // add the behavior of calculator service to perform two numbers substraction
+        when( calculatorService.substraction(230, 160) ).thenReturn(70.0);
+
+        // test the substract operation
+        assertEquals(mathApplication.substract(230, 160), 70.0);
     }
 }
