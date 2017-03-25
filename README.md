@@ -1,1 +1,1 @@
-# mock-playground
+This is my playground to practice the use of the Mockito Framework
