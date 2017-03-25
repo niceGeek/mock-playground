@@ -35,7 +35,7 @@ public class MathApplicationTester {
         when( calculatorService.addition(10.0, 20.0) ).thenReturn(30.0);
 
         // test the add functionality
-        assertEquals( mathApplication.add(10.0, 20.0), 30.0 );
+        assertEquals( mathApplication.add(10.0, 20.0), 30.0, 0.0 );
     }
 
     // test substraction operation
@@ -45,6 +45,15 @@ public class MathApplicationTester {
         when( calculatorService.substraction(230, 160) ).thenReturn(70.0);
 
         // test the substract operation
-        assertEquals(mathApplication.substract(230, 160), 70.0);
+        assertEquals(mathApplication.substract(230, 160), 70.0, 0.0);
+    }
+
+    @Test
+    public void testMultiplication() {
+        // add behavior to calculator service to perform multiplication
+        when( calculatorService.multiplication(30.0, 5.0) ).thenReturn(150.0);
+
+        // test
+        assertEquals(mathApplication.multiply(30.0, 5.0), 150.0, 0.0);
     }
 }
